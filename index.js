@@ -17,7 +17,7 @@ const services = {
     "Money Transfer (Domestic Remittance)": "* Sender Aadhaar + Mobile<br>* Receiver Bank Details<br>* ID Proof",
     "Micro ATM": "* Aadhaar Card<br>* Bank Account<br>* Fingerprint",
     "Passbook Printing": "* Bank Passbook<br>* Aadhaar Card",
-    "Insurance Premium Payment": "",  // No specific documents provided, add if needed
+    "Insurance Premium Payment": "",
     "Pension Services": "* Aadhaar Card<br>* Bank Passbook<br>* Age Proof<br>* Income Certificate",
     "Pradhan Mantri Jeevan Jyoti Bima Yojana (PMJJBY)": "* Aadhaar Card<br>* Bank Passbook<br>* Nominee Details",
     "Pradhan Mantri Suraksha Bima Yojana (PMSBY)": "* Aadhaar Card<br>* Bank Passbook<br>* Nominee Details",
@@ -26,20 +26,20 @@ const services = {
     "Crop Insurance (PMFBY)": "* Aadhaar Card<br>* Bank Passbook<br>* Address Proof<br>* Nominee Aadhaar<br>* Land Papers (Crop Insurance)",
     "Online Form Filling (Govt Exams)": "* Aadhaar Card<br>* Educational Certificates<br>* Passport Photo<br>* Signature",
     "Scholarship Application": "* Aadhaar Card<br>* Caste Certificate<br>* Income Certificate<br>* Bank Passbook<br>* School/College ID",
-    "Skill Development Courses": "",  // No specific documents provided
+    "Skill Development Courses": "",
     "Digital Literacy (PMGDISHA)": "* Aadhaar Card<br>* Mobile Number<br>* Passport Photo",
     "University / College Admission Forms": "* Aadhaar Card<br>* Educational Certificates<br>* Passport Photo<br>* Signature",
-    "Online Classes & Exams Support": "",  // No specific documents provided
-    "Printing / Scanning / Photocopy": "",  // No specific documents provided
-    "Online Form Apply (All Govt Forms)": "",  // No specific documents provided
+    "Online Classes & Exams Support": "",
+    "Printing / Scanning / Photocopy": "",
+    "Online Form Apply (All Govt Forms)": "",
     "Resume / CV Making": "* Basic Personal Details<br>* Education & Experience Details<br>* Photo (optional)",
     "Email ID Creation": "* Basic Personal Details<br>* Education & Experience Details<br>* Photo (optional)",
-    "Mobile / Laptop Assistance": "",  // No specific documents provided
+    "Mobile / Laptop Assistance": "",
     "Website & Domain Services (CSC VLE)": "* Basic Personal Details<br>* Education & Experience Details<br>* Photo (optional)",
-    "Mobile Recharge": "",  // No specific documents provided
-    "DTH Recharge": "",  // No specific documents provided
+    "Mobile Recharge": "",
+    "DTH Recharge": "",
     "New SIM (BSNL CSC)": "* Aadhaar Card<br>* Fingerprint<br>* Passport Size Photo",
-    "Broadband Services": "",  // No specific documents provided
+    "Broadband Services": "",
     "GST Registration": "* Aadhaar Card<br>* PAN Card<br>* Address Proof<br>* Bank Passbook<br>* Business Proof",
     "GST Return Filing": "* Aadhaar Card<br>* PAN Card<br>* Bank Statement<br>* Income Details",
     "ITR Filing": "* Aadhaar Card<br>* PAN Card<br>* Bank Statement<br>* Income Details",
@@ -48,7 +48,7 @@ const services = {
     "MSME / Udyam Registration": "* Aadhaar Card<br>* PAN Card<br>* Business Details",
     "Soil Health Card": "* Aadhaar Card<br>* Land Papers<br>* Mobile Number",
     "Crop Advisory": "* Aadhaar Card<br>* Land Papers<br>* Mobile Number",
-    "Weather Information": "",  // No specific documents provided
+    "Weather Information": "",
     "Farmer Registration": "* Aadhaar Card<br>* Land Papers<br>* Mobile Number",
     "PM Kisan Yojana": "* Aadhaar Card<br>* Bank Passbook<br>* Land Records",
     "IRCTC Railway Ticket Booking": "* Aadhaar Card<br>* Passenger Details",
@@ -57,55 +57,59 @@ const services = {
     "Electricity Bill Payment": "* Consumer Number<br>* Bill Copy",
     "Water Bill Payment": "* Consumer Number<br>* Bill Copy",
     "Gas Bill Payment": "* Consumer Number<br>* Bill Copy",
-    "Telemedicine (Online Doctor)": "",  // No specific documents provided
+    "Telemedicine (Online Doctor)": "",
     "Ayushman Bharat Card": "* Aadhaar Card<br>* Ration Card<br>* Mobile Number",
-    "Health Checkup Booking": "",  // No specific documents provided
-    "CSC e-Marketplace": "",  // No specific documents provided
-    "CSC Grameen eStore": "",  // No specific documents provided
-    "CSC Digital Village Services": "",  // No specific documents provided
+    "Health Checkup Booking": "",
+    "CSC e-Marketplace": "",
+    "CSC Grameen eStore": "",
+    "CSC Digital Village Services": "",
     "FASTag Registration": "* Aadhaar Card<br>* Vehicle RC<br>* Mobile Number"
 };
 
 function showDetails(service) {
-    const details = services[service] || "No details available.";
-    document.getElementById('serviceDetails').innerHTML = `<h3>${service}</h3><p>${details}</p>`;
-}
-
-function bookAppointment() {
-    const name = document.getElementById('name').value;
-    const mob = document.getElementById('mob').value;
-    const service = document.getElementById('service').value;
-    const date = document.getElementById('date').value;
-    const time = document.getElementById('time').value;
-
-    if (!name || !mob || !service || !date || !time) {
-        alert('Please fill all fields.');
-        return;
+    const details = services[service] || "Service available. Contact center for details.";
+    const container = document.getElementById('serviceDetails');
+    if (details) {
+        container.innerHTML = `<h2>${service}</h2><div class="details-content">${details.replace(/\n/g, '<br>')}</div>`;
+    } else {
+        container.innerHTML = `<h2>${service}</h2><p>No specific documents required. Visit the center for assistance.</p>`;
     }
-
-    fetch(`/check?date=${date}&time=${time}`)
-        .then(res => res.json())
-        .then(data => {
-            if (data.available) {
-                const appointmentData = { name, mob, service, date, time };
-                fetch('/book', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(appointmentData)
-                })
-                .then(res => res.json())
-                .then(result => {
-                    if (result.success) {
-                        alert(`Appointment booked! ID: ${result.id}`);
-                        document.getElementById('appointmentForm').reset();
-                    } else {
-                        alert('Booking failed.');
-                    }
-                })
-                .catch(err => alert('Error: ' + err));
-            } else {
-                alert('Already booked.');
-            }
-        })
-        .catch(err => alert('Error checking availability: ' + err));
 }
+
+function handleKey(e, service) {
+    if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        showDetails(service);
+    }
+}
+
+// Theme Toggle
+const themeToggle = document.getElementById('themeToggle');
+const savedTheme = localStorage.getItem('theme');
+const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    themeToggle.textContent = '☀️';
+    themeToggle.setAttribute('aria-label', 'Switch to light mode');
+}
+
+themeToggle.addEventListener('click', () => {
+    const current = document.documentElement.getAttribute('data-theme') || 'light';
+    const newTheme = current === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    themeToggle.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+    themeToggle.setAttribute('aria-label', newTheme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+});
+
+// Hamburger Menu
+const menuToggle = document.getElementById('menuToggle');
+const navMenu = document.getElementById('nav-menu');
+
+menuToggle.addEventListener('click', () => {
+    const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+    menuToggle.setAttribute('aria-expanded', !expanded);
+    menuToggle.textContent = expanded ? '☰' : '✕';
+    navMenu.classList.toggle('open');
+});
