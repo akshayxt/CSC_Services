@@ -86,7 +86,7 @@ body { font-family: 'Segoe UI', Arial, sans-serif; background: var(--bg); color:
 .header-actions button { background: none; border: none; font-size: 1.8rem; cursor: pointer; padding: 0 1rem; }
 
 .sticky-nav {
-    position: sticky; top: 68px; background: var(--nav-bg); z-index: 999; box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    position: relative; top: 5px; background: var(--nav-bg); z-index: 999; box-shadow: 0 2px 8px rgba(97, 96, 96, 0);
 }
 
 .sticky-nav ul {
