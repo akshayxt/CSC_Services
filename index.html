@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranjeet Common Service Center</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Ranjeet Common Service Center</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#gov">🏛️ Government Services</a></li>
+            <li><a href="#banking">💰 Banking & Financial Services</a></li>
+            <li><a href="#insurance">🛡️ Insurance Services</a></li>
+            <li><a href="#education">📚 Education Services</a></li>
+            <li><a href="#digital">💻 Digital & IT Services</a></li>
+            <li><a href="#telecom">📱 Telecom Services</a></li>
+            <li><a href="#business">🧾 Business & Tax Services</a></li>
+            <li><a href="#agriculture">🚜 Agriculture Services</a></li>
+            <li><a href="#travel">🚆 Travel & Utility Services</a></li>
+            <li><a href="#health">🏥 Health Services</a></li>
+            <li><a href="#csc">📦 CSC Special Services</a></li>
+            <li><a href="#book">Book Appointment</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div id="serviceDetails"></div>
+
+        <section id="gov">
+            <h2>🏛️ Government Services</h2>
+            <ul>
+                <li onclick="showDetails('Aadhaar Enrolment / Update')">Aadhaar Enrolment / Update</li>
+                <li onclick="showDetails('PAN Card (New / Correction)')">PAN Card (New / Correction)</li>
+                <li onclick="showDetails('Voter ID (Apply / Update)')">Voter ID (Apply / Update)</li>
+                <li onclick="showDetails('Passport Application (PSK CSC)')">Passport Application (PSK CSC)</li>
+                <li onclick="showDetails('Driving Licence (Apply / Renewal)')">Driving Licence (Apply / Renewal)</li>
+                <li onclick="showDetails('Ration Card Services')">Ration Card Services</li>
+                <li onclick="showDetails('Birth Certificate / Death Certificate')">Birth Certificate / Death Certificate</li>
+                <li onclick="showDetails('Income Certificate')">Income Certificate</li>
+                <li onclick="showDetails('Caste Certificate')">Caste Certificate</li>
+                <li onclick="showDetails('Domicile / Residence Certificate')">Domicile / Residence Certificate</li>
+                <li onclick="showDetails('Marriage Certificate')">Marriage Certificate</li>
+                <li onclick="showDetails('E-District Services')">E-District Services</li>
+                <li onclick="showDetails('Digilocker Services')">Digilocker Services</li>
+            </ul>
+        </section>
+
+        <section id="banking">
+            <h2>💰 Banking & Financial Services</h2>
+            <ul>
+                <li onclick="showDetails('CSC Banking (Basic Banking Account)')">CSC Banking (Basic Banking Account)</li>
+                <li onclick="showDetails('AEPS (Aadhaar Enabled Payment System)')">AEPS (Aadhaar Enabled Payment System)</li>
+                <li onclick="showDetails('Money Transfer (Domestic Remittance)')">Money Transfer (Domestic Remittance)</li>
+                <li onclick="showDetails('Micro ATM')">Micro ATM</li>
+                <li onclick="showDetails('Passbook Printing')">Passbook Printing</li>
+                <li onclick="showDetails('Insurance Premium Payment')">Insurance Premium Payment</li>
+                <li onclick="showDetails('Pension Services')">Pension Services</li>
+            </ul>
+        </section>
+
+        <section id="insurance">
+            <h2>🛡️ Insurance Services</h2>
+            <ul>
+                <li onclick="showDetails('Pradhan Mantri Jeevan Jyoti Bima Yojana (PMJJBY)')">Pradhan Mantri Jeevan Jyoti Bima Yojana (PMJJBY)</li>
+                <li onclick="showDetails('Pradhan Mantri Suraksha Bima Yojana (PMSBY)')">Pradhan Mantri Suraksha Bima Yojana (PMSBY)</li>
+                <li onclick="showDetails('Life Insurance (LIC / CSC Insurance)')">Life Insurance (LIC / CSC Insurance)</li>
+                <li onclick="showDetails('Health Insurance')">Health Insurance</li>
+                <li onclick="showDetails('Crop Insurance (PMFBY)')">Crop Insurance (PMFBY)</li>
+            </ul>
+        </section>
+
+        <section id="education">
+            <h2>📚 Education Services</h2>
+            <ul>
+                <li onclick="showDetails('Online Form Filling (Govt Exams)')">Online Form Filling (Govt Exams)</li>
+                <li onclick="showDetails('Scholarship Application')">Scholarship Application</li>
+                <li onclick="showDetails('Skill Development Courses')">Skill Development Courses</li>
+                <li onclick="showDetails('Digital Literacy (PMGDISHA)')">Digital Literacy (PMGDISHA)</li>
+                <li onclick="showDetails('University / College Admission Forms')">University / College Admission Forms</li>
+                <li onclick="showDetails('Online Classes & Exams Support')">Online Classes & Exams Support</li>
+            </ul>
+        </section>
+
+        <section id="digital">
+            <h2>💻 Digital & IT Services</h2>
+            <ul>
+                <li onclick="showDetails('Printing / Scanning / Photocopy')">Printing / Scanning / Photocopy</li>
+                <li onclick="showDetails('Online Form Apply (All Govt Forms)')">Online Form Apply (All Govt Forms)</li>
+                <li onclick="showDetails('Resume / CV Making')">Resume / CV Making</li>
+                <li onclick="showDetails('Email ID Creation')">Email ID Creation</li>
+                <li onclick="showDetails('Mobile / Laptop Assistance')">Mobile / Laptop Assistance</li>
+                <li onclick="showDetails('Website & Domain Services (CSC VLE)')">Website & Domain Services (CSC VLE)</li>
+            </ul>
+        </section>
+
+        <section id="telecom">
+            <h2>📱 Telecom Services</h2>
+            <ul>
+                <li onclick="showDetails('Mobile Recharge')">Mobile Recharge</li>
+                <li onclick="showDetails('DTH Recharge')">DTH Recharge</li>
+                <li onclick="showDetails('New SIM (BSNL CSC)')">New SIM (BSNL CSC)</li>
+                <li onclick="showDetails('Broadband Services')">Broadband Services</li>
+            </ul>
+        </section>
+
+        <section id="business">
+            <h2>🧾 Business & Tax Services</h2>
+            <ul>
+                <li onclick="showDetails('GST Registration')">GST Registration</li>
+                <li onclick="showDetails('GST Return Filing')">GST Return Filing</li>
+                <li onclick="showDetails('ITR Filing')">ITR Filing</li>
+                <li onclick="showDetails('Trade License')">Trade License</li>
+                <li onclick="showDetails('Shop Act Registration')">Shop Act Registration</li>
+                <li onclick="showDetails('MSME / Udyam Registration')">MSME / Udyam Registration</li>
+            </ul>
+        </section>
+
+        <section id="agriculture">
+            <h2>🚜 Agriculture Services</h2>
+            <ul>
+                <li onclick="showDetails('Soil Health Card')">Soil Health Card</li>
+                <li onclick="showDetails('Crop Advisory')">Crop Advisory</li>
+                <li onclick="showDetails('Weather Information')">Weather Information</li>
+                <li onclick="showDetails('Farmer Registration')">Farmer Registration</li>
+                <li onclick="showDetails('PM Kisan Yojana')">PM Kisan Yojana</li>
+            </ul>
+        </section>
+
+        <section id="travel">
+            <h2>🚆 Travel & Utility Services</h2>
+            <ul>
+                <li onclick="showDetails('IRCTC Railway Ticket Booking')">IRCTC Railway Ticket Booking</li>
+                <li onclick="showDetails('Bus Ticket Booking')">Bus Ticket Booking</li>
+                <li onclick="showDetails('Flight Ticket Booking')">Flight Ticket Booking</li>
+                <li onclick="showDetails('Electricity Bill Payment')">Electricity Bill Payment</li>
+                <li onclick="showDetails('Water Bill Payment')">Water Bill Payment</li>
+                <li onclick="showDetails('Gas Bill Payment')">Gas Bill Payment</li>
+            </ul>
+        </section>
+
+        <section id="health">
+            <h2>🏥 Health Services</h2>
+            <ul>
+                <li onclick="showDetails('Telemedicine (Online Doctor)')">Telemedicine (Online Doctor)</li>
+                <li onclick="showDetails('Ayushman Bharat Card')">Ayushman Bharat Card</li>
+                <li onclick="showDetails('Health Checkup Booking')">Health Checkup Booking</li>
+            </ul>
+        </section>
+
+        <section id="csc">
+            <h2>📦 CSC Special Services</h2>
+            <ul>
+                <li onclick="showDetails('CSC e-Marketplace')">CSC e-Marketplace</li>
+                <li onclick="showDetails('CSC Grameen eStore')">CSC Grameen eStore</li>
+                <li onclick="showDetails('CSC Digital Village Services')">CSC Digital Village Services</li>
+                <li onclick="showDetails('FASTag Registration')">FASTag Registration</li>
+            </ul>
+        </section>
+
+        <section id="book">
+            <h2>Book Appointment</h2>
+            <form id="appointmentForm">
+                <input type="text" id="name" placeholder="Name" required>
+                <input type="tel" id="mob" placeholder="Mobile Number" required>
+                <select id="service" required>
+                    <option value="">Select Service</option>
+                    <option value="Aadhaar Enrolment / Update">Aadhaar Enrolment / Update</option>
+                    <option value="PAN Card (New / Correction)">PAN Card (New / Correction)</option>
+                    <option value="Voter ID (Apply / Update)">Voter ID (Apply / Update)</option>
+                    <option value="Passport Application (PSK CSC)">Passport Application (PSK CSC)</option>
+                    <option value="Driving Licence (Apply / Renewal)">Driving Licence (Apply / Renewal)</option>
+                    <option value="Ration Card Services">Ration Card Services</option>
+                    <option value="Birth Certificate / Death Certificate">Birth Certificate / Death Certificate</option>
+                    <option value="Income Certificate">Income Certificate</option>
+                    <option value="Caste Certificate">Caste Certificate</option>
+                    <option value="Domicile / Residence Certificate">Domicile / Residence Certificate</option>
+                    <option value="Marriage Certificate">Marriage Certificate</option>
+                    <option value="E-District Services">E-District Services</option>
+                    <option value="Digilocker Services">Digilocker Services</option>
+                    <option value="CSC Banking (Basic Banking Account)">CSC Banking (Basic Banking Account)</option>
+                    <option value="AEPS (Aadhaar Enabled Payment System)">AEPS (Aadhaar Enabled Payment System)</option>
+                    <option value="Money Transfer (Domestic Remittance)">Money Transfer (Domestic Remittance)</option>
+                    <option value="Micro ATM">Micro ATM</option>
+                    <option value="Passbook Printing">Passbook Printing</option>
+                    <option value="Insurance Premium Payment">Insurance Premium Payment</option>
+                    <option value="Pension Services">Pension Services</option>
+                    <option value="Pradhan Mantri Jeevan Jyoti Bima Yojana (PMJJBY)">Pradhan Mantri Jeevan Jyoti Bima Yojana (PMJJBY)</option>
+                    <option value="Pradhan Mantri Suraksha Bima Yojana (PMSBY)">Pradhan Mantri Suraksha Bima Yojana (PMSBY)</option>
+                    <option value="Life Insurance (LIC / CSC Insurance)">Life Insurance (LIC / CSC Insurance)</option>
+                    <option value="Health Insurance">Health Insurance</option>
+                    <option value="Crop Insurance (PMFBY)">Crop Insurance (PMFBY)</option>
+                    <option value="Online Form Filling (Govt Exams)">Online Form Filling (Govt Exams)</option>
+                    <option value="Scholarship Application">Scholarship Application</option>
+                    <option value="Skill Development Courses">Skill Development Courses</option>
+                    <option value="Digital Literacy (PMGDISHA)">Digital Literacy (PMGDISHA)</option>
+                    <option value="University / College Admission Forms">University / College Admission Forms</option>
+                    <option value="Online Classes & Exams Support">Online Classes & Exams Support</option>
+                    <option value="Printing / Scanning / Photocopy">Printing / Scanning / Photocopy</option>
+                    <option value="Online Form Apply (All Govt Forms)">Online Form Apply (All Govt Forms)</option>
+                    <option value="Resume / CV Making">Resume / CV Making</option>
+                    <option value="Email ID Creation">Email ID Creation</option>
+                    <option value="Mobile / Laptop Assistance">Mobile / Laptop Assistance</option>
+                    <option value="Website & Domain Services (CSC VLE)">Website & Domain Services (CSC VLE)</option>
+                    <option value="Mobile Recharge">Mobile Recharge</option>
+                    <option value="DTH Recharge">DTH Recharge</option>
+                    <option value="New SIM (BSNL CSC)">New SIM (BSNL CSC)</option>
+                    <option value="Broadband Services">Broadband Services</option>
+                    <option value="GST Registration">GST Registration</option>
+                    <option value="GST Return Filing">GST Return Filing</option>
+                    <option value="ITR Filing">ITR Filing</option>
+                    <option value="Trade License">Trade License</option>
+                    <option value="Shop Act Registration">Shop Act Registration</option>
+                    <option value="MSME / Udyam Registration">MSME / Udyam Registration</option>
+                    <option value="Soil Health Card">Soil Health Card</option>
+                    <option value="Crop Advisory">Crop Advisory</option>
+                    <option value="Weather Information">Weather Information</option>
+                    <option value="Farmer Registration">Farmer Registration</option>
+                    <option value="PM Kisan Yojana">PM Kisan Yojana</option>
+                    <option value="IRCTC Railway Ticket Booking">IRCTC Railway Ticket Booking</option>
+                    <option value="Bus Ticket Booking">Bus Ticket Booking</option>
+                    <option value="Flight Ticket Booking">Flight Ticket Booking</option>
+                    <option value="Electricity Bill Payment">Electricity Bill Payment</option>
+                    <option value="Water Bill Payment">Water Bill Payment</option>
+                    <option value="Gas Bill Payment">Gas Bill Payment</option>
+                    <option value="Telemedicine (Online Doctor)">Telemedicine (Online Doctor)</option>
+                    <option value="Ayushman Bharat Card">Ayushman Bharat Card</option>
+                    <option value="Health Checkup Booking">Health Checkup Booking</option>
+                    <option value="CSC e-Marketplace">CSC e-Marketplace</option>
+                    <option value="CSC Grameen eStore">CSC Grameen eStore</option>
+                    <option value="CSC Digital Village Services">CSC Digital Village Services</option>
+                    <option value="FASTag Registration">FASTag Registration</option>
+                </select>
+                <input type="date" id="date" required>
+                <input type="time" id="time" required>
+                <button type="button" onclick="bookAppointment()">Submit</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
