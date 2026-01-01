@@ -7,10 +7,10 @@ from threading import Thread
 app = Flask(__name__)
 
 # Replace with your actual values
-API_ID = "YOUR_API_ID"  # From my.telegram.org
-API_HASH = "YOUR_API_HASH"  # From my.telegram.org
-BOT_TOKEN = "YOUR_BOT_TOKEN"  # From @BotFather
-GROUP_ID = 7876454654  # Note: If this is a group, it should typically be negative like -1007876454654; adjust accordingly
+API_ID = 24509589  # From my.telegram.org
+API_HASH = "717cf21d94c4934bcbe1eaa1ad86ae75"  # From my.telegram.org
+BOT_TOKEN = "8544073819:AAEfInj_b0mH-JpIVR1-kqyBBhPvDRSIJzs"  # From @BotFather
+GROUP_ID = -1003571206466  # Note: If this is a group, it should typically be negative like -1007876454654; adjust accordingly
 
 client = Client("bot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 
