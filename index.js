@@ -82,11 +82,13 @@ function showDetails(service) {
 }
 
 function closeModal() {
-    document.getElementById('modalOverlay').classList.remove('active');
-    document.getElementById('modalOverlay').setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = ''; // Restore body scroll
+    const modal = document.getElementById('modalOverlay');
+    modal.classList.add('closing');
+    setTimeout(() => {
+        modal.classList.remove('active', 'closing');
+        document.body.style.overflow = '';
+    }, 600);
 }
-
 function handleKey(e, service) {
     if (e.key === "Enter" || e.key === " ") {
         e.preventDefault();
