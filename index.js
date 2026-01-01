@@ -68,12 +68,23 @@ const services = {
 
 function showDetails(service) {
     const details = services[service] || "Service available. Contact center for details.";
-    const container = document.getElementById('serviceDetails');
+    const modalTitle = document.getElementById('modalTitle');
+    const container = document.querySelector('#serviceDetails .details-content');
+    modalTitle.textContent = service;
     if (details) {
-        container.innerHTML = `<h2>${service}</h2><div class="details-content">${details.replace(/\n/g, '<br>')}</div>`;
+        container.innerHTML = details.replace(/\n/g, '<br>');
     } else {
-        container.innerHTML = `<h2>${service}</h2><p>No specific documents required. Visit the center for assistance.</p>`;
+        container.innerHTML = '<p>No specific documents required. Visit the center for assistance.</p>';
     }
+    document.getElementById('modalOverlay').classList.add('active');
+    document.getElementById('modalOverlay').setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden'; // Prevent body scroll when modal is open
+}
+
+function closeModal() {
+    document.getElementById('modalOverlay').classList.remove('active');
+    document.getElementById('modalOverlay').setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = ''; // Restore body scroll
 }
 
 function handleKey(e, service) {
@@ -82,6 +93,27 @@ function handleKey(e, service) {
         showDetails(service);
     }
 }
+
+// Modal Event Listeners
+document.addEventListener('DOMContentLoaded', () => {
+    const closeButton = document.getElementById('closeModal');
+    const modalOverlay = document.getElementById('modalOverlay');
+
+    closeButton.addEventListener('click', closeModal);
+
+    modalOverlay.addEventListener('click', (e) => {
+        if (e.target === modalOverlay) {
+            closeModal();
+        }
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modalOverlay.classList.contains('active')) {
+            closeModal();
+        }
+    });
+});
 
 // Theme Toggle
 const themeToggle = document.getElementById('themeToggle');
