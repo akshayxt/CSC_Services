@@ -4,21 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ranjeet Common Service Center</title>
+
+    <!-- AOS Library CDN -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <link rel="stylesheet" href="index.css">
+
+    <!-- AOS JS CDN -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="index.js" defer></script>
 </head>
-<section class="hero">
-    <div class="hero-content">
-        <h1 class="hero-title">Ranjeet Common Service Center</h1>
-        <p class="hero-subtitle">सभी सरकारी, बैंकिंग, इंश्योरेंस और डिजिटल सेवाएं एक ही जगह पर</p>
-        <div class="hero-glow"></div>
-    </div>
-    <div class="floating-icons">
-        <span>🏛️</span><span>💳</span><span>🛡️</span><span>📚</span><span>📱</span><span>🚜</span>
-    </div>
-</section>
 <body>
     <a href="#main" class="skip-link">Skip to main content</a>
+
+    <!-- Hero Section -->
+    <section class="hero" data-aos="fade-down" data-aos-duration="1200">
+        <div class="hero-content">
+            <h1 class="hero-title">Ranjeet Common Service Center</h1>
+            <p class="hero-subtitle">Address: Sirauli Chauraha Meerganj 243504 Mob 9411996099</p>
+            <div class="hero-glow"></div>
+        </div>
+        <div class="floating-icons">
+            <span>🏛️</span><span>💳</span><span>🛡️</span><span>📚</span><span>📱</span><span>🚜</span>
+        </div>
+    </section>
 
     <header class="sticky-header">
         <h1>Ranjeet Common Service Center</h1>
@@ -27,7 +36,7 @@
             <button id="menuToggle" class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">☰</button>
         </div>
     </header>
-   
+
     <nav id="nav-menu" class="sticky-nav" aria-label="Main navigation">
         <ul>
             <li><a href="#gov">🏛️ Government</a></li>
@@ -45,145 +54,157 @@
     </nav>
 
     <main id="main">
-        <h2>Select a service to view required documents</h2>
-        <p>Click or tap any service from the list below to see the necessary documents.</p>
+        <h2 data-aos="fade-up" data-aos-duration="800">Select a service to view required documents</h2>
+        <p data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
+            Click or tap any service from the list below to see the necessary documents.
+        </p>
 
-        <section id="gov" class="service-card">
+        <!-- Government Services -->
+        <section id="gov" class="service-card" data-aos="fade-up" data-aos-delay="100">
             <h2>🏛️ Government Services</h2>
             <ul class="service-list">
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">Aadhaar Enrolment / Update</li>
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">PAN Card (New / Correction)</li>
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">Voter ID (Apply / Update)</li>
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">Passport Application (PSK CSC)</li>
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">Driving Licence (Apply / Renewal)</li>
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">Ration Card Services</li>
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">Birth Certificate / Death Certificate</li>
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">Income Certificate</li>
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">Caste Certificate</li>
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">Domicile / Residence Certificate</li>
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">Marriage Certificate</li>
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">E-District Services</li>
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">Digilocker Services</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="50">Aadhaar Enrolment / Update</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="100">PAN Card (New / Correction)</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="150">Voter ID (Apply / Update)</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="200">Passport Application (PSK CSC)</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="250">Driving Licence (Apply / Renewal)</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="300">Ration Card Services</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="350">Birth Certificate / Death Certificate</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="400">Income Certificate</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="450">Caste Certificate</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="500">Domicile / Residence Certificate</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="550">Marriage Certificate</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="600">E-District Services</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="650">Digilocker Services</li>
             </ul>
         </section>
 
-        <section id="banking" class="service-card">
+        <!-- Banking -->
+        <section id="banking" class="service-card" data-aos="fade-up" data-aos-delay="200">
             <h2>💰 Banking & Financial Services</h2>
             <ul class="service-list">
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">CSC Banking (Basic Banking Account)</li>
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">AEPS (Aadhaar Enabled Payment System)</li>
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">Money Transfer (Domestic Remittance)</li>
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">Micro ATM</li>
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">Passbook Printing</li>
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">Insurance Premium Payment</li>
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">Pension Services</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="50">CSC Banking (Basic Banking Account)</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="100">AEPS (Aadhaar Enabled Payment System)</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="150">Money Transfer (Domestic Remittance)</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="200">Micro ATM</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="250">Passbook Printing</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="300">Insurance Premium Payment</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="350">Pension Services</li>
             </ul>
         </section>
-        
 
-        <section id="insurance" class="service-card">
+        <!-- Insurance -->
+        <section id="insurance" class="service-card" data-aos="fade-up" data-aos-delay="300">
             <h2>🛡️ Insurance Services</h2>
             <ul class="service-list">
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">Pradhan Mantri Jeevan Jyoti Bima Yojana (PMJJBY)</li>
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">Pradhan Mantri Suraksha Bima Yojana (PMSBY)</li>
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">Life Insurance (LIC / CSC Insurance)</li>
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">Health Insurance</li>
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">Crop Insurance (PMFBY)</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="50">Pradhan Mantri Jeevan Jyoti Bima Yojana (PMJJBY)</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="100">Pradhan Mantri Suraksha Bima Yojana (PMSBY)</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="150">Life Insurance (LIC / CSC Insurance)</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="200">Health Insurance</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="250">Crop Insurance (PMFBY)</li>
             </ul>
         </section>
 
-        <section id="education" class="service-card">
+        <!-- Education -->
+        <section id="education" class="service-card" data-aos="fade-up" data-aos-delay="400">
             <h2>📚 Education Services</h2>
             <ul class="service-list">
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">Online Form Filling (Govt Exams)</li>
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">Scholarship Application</li>
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">Skill Development Courses</li>
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">Digital Literacy (PMGDISHA)</li>
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">University / College Admission Forms</li>
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">Online Classes & Exams Support</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="50">Online Form Filling (Govt Exams)</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="100">Scholarship Application</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="150">Skill Development Courses</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="200">Digital Literacy (PMGDISHA)</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="250">University / College Admission Forms</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="300">Online Classes & Exams Support</li>
             </ul>
         </section>
 
-        <section id="digital" class="service-card">
+        <!-- Digital & IT -->
+        <section id="digital" class="service-card" data-aos="fade-up" data-aos-delay="500">
             <h2>💻 Digital & IT Services</h2>
             <ul class="service-list">
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">Printing / Scanning / Photocopy</li>
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">Online Form Apply (All Govt Forms)</li>
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">Resume / CV Making</li>
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">Email ID Creation</li>
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">Mobile / Laptop Assistance</li>
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">Website & Domain Services (CSC VLE)</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="50">Printing / Scanning / Photocopy</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="100">Online Form Apply (All Govt Forms)</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="150">Resume / CV Making</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="200">Email ID Creation</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="250">Mobile / Laptop Assistance</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="300">Website & Domain Services (CSC VLE)</li>
             </ul>
         </section>
 
-        <section id="telecom" class="service-card">
+        <!-- Telecom -->
+        <section id="telecom" class="service-card" data-aos="fade-up" data-aos-delay="600">
             <h2>📱 Telecom Services</h2>
             <ul class="service-list">
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">Mobile Recharge</li>
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">DTH Recharge</li>
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">New SIM (BSNL CSC)</li>
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">Broadband Services</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="50">Mobile Recharge</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="100">DTH Recharge</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="150">New SIM (BSNL CSC)</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="200">Broadband Services</li>
             </ul>
         </section>
 
-        <section id="business" class="service-card">
+        <!-- Business & Tax -->
+        <section id="business" class="service-card" data-aos="fade-up" data-aos-delay="700">
             <h2>🧾 Business & Tax Services</h2>
             <ul class="service-list">
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">GST Registration</li>
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">GST Return Filing</li>
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">ITR Filing</li>
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">Trade License</li>
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">Shop Act Registration</li>
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">MSME / Udyam Registration</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="50">GST Registration</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="100">GST Return Filing</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="150">ITR Filing</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="200">Trade License</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="250">Shop Act Registration</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="300">MSME / Udyam Registration</li>
             </ul>
         </section>
 
-        <section id="agriculture" class="service-card">
+        <!-- Agriculture -->
+        <section id="agriculture" class="service-card" data-aos="fade-up" data-aos-delay="800">
             <h2>🚜 Agriculture Services</h2>
             <ul class="service-list">
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">Soil Health Card</li>
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">Crop Advisory</li>
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">Weather Information</li>
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">Farmer Registration</li>
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">PM Kisan Yojana</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="50">Soil Health Card</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="100">Crop Advisory</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="150">Weather Information</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="200">Farmer Registration</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="250">PM Kisan Yojana</li>
             </ul>
         </section>
 
-        <section id="travel" class="service-card">
+        <!-- Travel & Utility -->
+        <section id="travel" class="service-card" data-aos="fade-up" data-aos-delay="900">
             <h2>🚆 Travel & Utility Services</h2>
             <ul class="service-list">
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">IRCTC Railway Ticket Booking</li>
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">Bus Ticket Booking</li>
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">Flight Ticket Booking</li>
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">Electricity Bill Payment</li>
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">Water Bill Payment</li>
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">Gas Bill Payment</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="50">IRCTC Railway Ticket Booking</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="100">Bus Ticket Booking</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="150">Flight Ticket Booking</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="200">Electricity Bill Payment</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="250">Water Bill Payment</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="300">Gas Bill Payment</li>
             </ul>
         </section>
 
-        <section id="health" class="service-card">
+        <!-- Health -->
+        <section id="health" class="service-card" data-aos="fade-up" data-aos-delay="1000">
             <h2>🏥 Health Services</h2>
             <ul class="service-list">
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">Telemedicine (Online Doctor)</li>
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">Ayushman Bharat Card</li>
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">Health Checkup Booking</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="50">Telemedicine (Online Doctor)</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="100">Ayushman Bharat Card</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="150">Health Checkup Booking</li>
             </ul>
         </section>
 
-        <section id="csc" class="service-card">
+        <!-- CSC Special -->
+        <section id="csc" class="service-card" data-aos="fade-up" data-aos-delay="1100">
             <h2>📦 CSC Special Services</h2>
             <ul class="service-list">
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">CSC e-Marketplace</li>
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">CSC Grameen eStore</li>
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">CSC Digital Village Services</li>
-                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)">FASTag Registration</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="50">CSC e-Marketplace</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="100">CSC Grameen eStore</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="150">CSC Digital Village Services</li>
+                <li tabindex="0" onclick="showDetails(this.textContent)" onkeydown="handleKey(event, this.textContent)" data-aos="fade-up" data-aos-delay="200">FASTag Registration</li>
             </ul>
         </section>
     </main>
 
-    <!-- Modal Overlay for Service Details -->
+    <!-- Modal -->
     <div id="modalOverlay" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
-        <div id="serviceDetails" class="modal-content">
+        <div id="serviceDetails" class="modal-content" data-aos="zoom-in" data-aos-duration="600">
             <button id="closeModal" class="close-button" aria-label="Close modal">&times;</button>
             <h2 id="modalTitle">Select a service to view required documents</h2>
             <div class="details-content">
